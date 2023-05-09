@@ -1,0 +1,20 @@
+# 安装 VSCode 扩展包
+vscode:
+  extensions:
+    - ms-python.python
+
+# 配置环境变量
+environment:
+  PYTHON_VERSION: "3.8"
+
+# 在启动时运行命令
+tasks:
+  - init: |
+      pyenv install $PYTHON_VERSION
+      pyenv global $PYTHON_VERSION
+      python -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+    command: |
+      source venv/bin/activate
+      python app.py
