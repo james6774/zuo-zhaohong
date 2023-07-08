@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚乙烯醇(PVA)复杂反应网络分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚乙烯醇(PVA)复杂反应网络分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成裂解路径网络图</button>
+        <button onclick="displayText()">路径分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PVA_ACRN.png" alt="PVA_ACRN.png" style="width:70%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>聚乙烯醇(PVA)热裂解的过程也相当复杂，涉及多个反应路径和中间产物。以下是其中一些主要的裂解路径。热解反应：在高温条件下，聚乙烯醇分子中的C-O键可能会断裂，生成乙烯和水分子。这是聚乙烯醇热裂解的一个主要路径。缩合反应：在高温和高压下，聚乙烯醇分子之间可能会发生缩合反应，形成较长的高聚物。这是聚乙烯醇热裂解过程中的另一个主要路径。氧化反应：聚乙烯醇也可能在氧气存在下发生氧化反应，生成羧酸和醛。这一反应的速率取决于氧气的浓度、反应温度和聚乙烯醇的分子量等因素。烷基化反应：聚乙烯醇也可能与一些含有活泼氢原子的化合物发生烷基化反应，形成乙基化或丙基化产物。这些产物可以进一步被裂解成较小的化合物。</p>';
+
+
+
+        }
+    </script>
+</body>
+</html>

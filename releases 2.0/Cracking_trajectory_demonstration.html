@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>裂解轨迹演示</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>反应体系裂解轨迹</h1>
+        <div class="button">
+            <button onclick="window.location.href='Cracking_trajectory_demonstration_PE.html'">聚乙烯(PE)</button>
+            <button onclick="window.location.href='Cracking_trajectory_demonstration_PB.html'">聚丁二烯(PB)</button>
+            <button onclick="window.location.href='Cracking_trajectory_demonstration_PVA.html'">聚乙烯醇(PVA)</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+            <p>
+			反应体系轨迹通常用于记录模拟过程中系统的动态信息，通常包括每个时间步的模拟盒子的尺寸和形状，每个时间步的每个粒子的位置，可能还包括每个粒子的速度、力、类型、分子ID等其他信息。
+			</p>
+			<h2>1.反应过程中物种的轨迹可视化</h2>
+			<p>
+             使用如VMD、OVITO等分子可视化软件可以看到模拟过程中粒子的运动情况。
+			</p>
+			<h2>2.轨迹的分析</h2>
+			<p>
+             通过分析轨迹文件可以获取一些重要的物理和化学性质，例如扩散系数、粘度、配位数、键长分布、平均结构等。
+			</p>
+			  
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+       
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

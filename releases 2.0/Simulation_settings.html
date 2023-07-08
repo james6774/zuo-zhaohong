@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>选择优化的体系</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>选择控制文件（input file）</h1>
+        <div class="button">
+		    <button onclick="openFile('input文件参数说明.txt')">input文件的参数说明</button>
+            <button onclick="openFile('in3.PB.txt')">聚乙烯（PE）</button>
+            <button onclick="openFile('in3.PB.txt')">聚丁二烯（PB）</button>
+            <button onclick="openFile('in3.PB.txt')">聚乙烯醇（PVA）</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+	        <p>
+                本实验给出了三个基本的input文件，您可以根据自己的计算要求修改或增减参数
+            </p>
+            
+			  <h2>详细的参数可参考Lammps的官方网站</h2>
+            <p>
+			<a href="https://docs.lammps.org/Manual.html" target="_blank">点击这里打开链接</a>
+			</p>
+              
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+        <button type="button" onclick="window.location.href='ReaxFF_simulation.html'">下一步</button>
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

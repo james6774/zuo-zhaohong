@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>课后作业</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>课后作业</h1>
+    <div class="container">
+        <div class="content">
+            <h2>数据说明及文件下载</h2>
+            <p>通过将轨迹文件(dump.CHO)导入到“Ovito”软件就可对轨迹进行可视化。</p>
+			<p>下载文件后，文件的后缀不能是“.txt，如果是，要”改为“.CHO”，如dump_PE.CHO，才能运行。</p>
+            <p><a href="dump_PE.CHO" download>下载dump_PE文件。</a></p>
+			<p><a href="dump_PB.CHO" download>下载dump_PB文件。</a></p>
+			<p><a href="dump_PVA.CHO" download>下载dump_PVA文件。</a></p>	
+            <p>“Ovito”软件的下载链接：</p>
+			<a href="https://www.ovito.org/windows-downloads/" target="_blank">https://www.ovito.org/windows-downloads</a></p>		
+        </div>
+        <div class="content">
+            <h2>课后作业</h2>
+            <p>下载轨迹文件和Ovito软件后，分别对三个反应体系进行观察和分析。</p>
+        </div>
+    </div>
+    <div class="nav-btns">
+		<button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚丁二烯(PB)复杂反应网络分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚丁二烯(PB)复杂反应网络分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成裂解路径网络图</button>
+        <button onclick="displayText()">路径分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks_homework.html">作业</button>
+		<button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PB_ACRN.png" alt="PB_CA.png" style="width:70%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>聚丁二烯裂解包括以下几个方面，热解：聚丁二烯首先会经历热解，这个过程是由于高温引起的分子振动和热量引起的链断裂导致的。在这个过程中，分子被分解成两个不同的自由基。这些自由基可以进一步参与其他反应。键反应：在这个反应中，分子中的双键（C=C）被断裂，形成一个自由基和一个带有一个未配对电子的碳原子。这是一个放热反应，因此在高温下更有可能发生。质子转移：自由基可能通过将一个氢原子从一个碳原子转移到另一个碳原子来稳定自己，这也是一个放热反应。这个过程生成了一个新的自由基和一个更稳定的化合物。长链碳骨架的断裂：由于高温和自由基的影响，聚丁二烯分子的长链碳骨架可能会断裂，生成更小的聚合物链或单体。</p>';
+
+
+
+
+        }
+    </script>
+</body>
+</html>

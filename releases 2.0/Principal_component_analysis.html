@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>主成分分析</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>主成分分析</h1>
+        <div class="button">
+            <button onclick="window.location.href='1.html'">PE</button>
+            <button onclick="window.location.href='2.html'">PB</button>
+            <button onclick="window.location.href='3.html'">PVA</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+            <h2>主成分分析（Principal Component Analysis，PCA）</h2>
+			<p>
+             在MD模拟中，由于研究的系统通常含有大量的原子，每个原子都在三维空间中移动。
+			 因此，整个系统的运动可以在非常高维的空间中描述。然而，对于许多生物分子，
+			 比如蛋白质，其活动状态通常由一些关键的结构域的集体运动决定，这些运动可能
+			 在某个更低维的子空间中发生。因此，主成分分析成为一种理想的方法，用来识别
+			 这些低维子空间，并且提供了一种更加简化但又能反映系统关键动态的方式。
+			</p>
+			  
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+        <button type="button" onclick="window.location.href='Simulation_settings.html'">下一步</button>
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

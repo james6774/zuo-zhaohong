@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚丁二烯(PB)成分分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚丁二烯(PB)成分分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成物种浓度-时间的数据图</button>
+        <button onclick="displayText()">数据分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Component_analysis_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Component_analysis.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PB_CA.png" alt="PVA_CA.png" style="width:80%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>PB模型中物种变化如图所示，从图a中的物种种类数（Species）和物种个数（Molecules）变化，以及C4H6的生成速率可以看出，PB裂解过程中反应初期0-10ps的裂解主要是C—C键的断裂，这与PE的初期键的断裂相似，但PB中C=C的存在使得反应进入到10ps以后键的断裂变得困难，导致反应链的裂解速率达到一个平衡，反应速率不再增加。随着反应时间在30 ps时物的增加，如图b和图c所示体系中稳定化合物C2H4、C2H2和中间自由基物种·CH3、·C2H3的产生，体系总体的裂解速度开始再次增加，随着反应的进行反应逐渐平稳。同时C4H6的浓度开始减小，减小的原因是C4H6分子仍然是一个不稳定的分子，随着反应的进行裂解生成的C4H6速率不足以抵消掉C4H6分解速率。从图d中可以看到·H自由基的浓度始终存在一个稳定的浓度，反应整个过程中·H自由基一致起到了重要的作用，且从始至终存在，这也说明在PB和PE一样大分子链的裂解过程中也伴随着脱氢反应。</p>';
+        }
+    </script>
+</body>
+</html>

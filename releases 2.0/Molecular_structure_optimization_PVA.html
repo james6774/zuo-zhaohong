@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>分子结构优化：聚乙烯(PE)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .img-container {
+            margin: 2em;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .dialog-container {
+            margin: 2em;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .dialog {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .nav-btns {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+        /* 添加背景色和边框圆角 */
+        .module-select, .param-setting {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .module-select span, .param-setting span {
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+        .module-select.shown span, .param-setting.shown span {
+            display: inline;
+            opacity: 1;
+        }
+        .module-select {
+            background-color: lightblue;
+            border-radius: 5px;
+        }
+        .param-setting {
+            background-color: lightgreen;
+            border-radius: 5px;
+        }
+		button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var moduleSelects = document.getElementsByClassName('module-select');
+            var paramSettings = document.getElementsByClassName('param-setting');
+
+            function showContent(event) {
+                event.target.classList.add('shown');
+            }
+
+            for (var i = 0; i < moduleSelects.length; i++) {
+                moduleSelects[i].addEventListener('click', showContent);
+            }
+
+            for (var i = 0; i < paramSettings.length; i++) {
+                paramSettings[i].addEventListener('click', showContent);
+            }
+        };
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".module-select").click(function() {
+                var text = $(this).attr('data-content');
+                $(this).data('text', text);
+                $(this).text('');
+                $(this).showLetter();
+            });
+
+            $(".param-setting").click(function() {
+                var text = $(this).attr('data-content');
+                $(this).data('text', text);
+                $(this).text('');
+                $(this).showLetter();
+            });
+
+            $.fn.showLetter = function() {
+                var text = $(this).data('text');
+                if (text && text.length > 0) {
+                    $(this).text($(this).text() + text.substr(0, 1));
+                    $(this).data('text', text.substr(1));
+                    var that = $(this);
+                    setTimeout(function() { that.showLetter(); }, 100);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="img-container">
+        <h1>分子结构优化</h1>
+        <h2>聚乙烯醇(PVA)</h2>
+        <img src="PVA.png" alt="聚乙烯醇(PVA)" width="60%">
+		<h2>优化后得到聚乙烯醇(PVA)空间坐标文件（data.CHO）</h2>
+    </div>
+    <div class="dialog-container">
+        <h1>Materials Studio参数设置</h1>
+		<p>点击蓝色和绿色按钮进行模块选择和参数设置</p>
+        <div class="dialog">
+            <h2>构建模型</h2>
+            <p><span class="module-select" data-content="选择模块：Build --->Build Polymers ---> Homopolymer"></span></p>
+            <p><span class="param-setting" data-content="参数设置：Library：olefins，Repeat unit：Poly(vinyl alcohol)，Tacticity：Isotactic，Chain length：30"></span></p>
+        </div>
+        <div class="dialog">
+            <h2>构型优化</h2>
+            <p><span class="module-select" data-content="选择模块：Modules ---> Forcite--->Calculation--->Task--->Geometry Optimization"></span></p>
+            <p><span class="param-setting" data-content="参数设置：Library：olefins，Repeat unit：Poly(vinyl alcohol)，Tacticity：Isotactic，Chain length：30"></span></p>
+        </div>
+        <div class="dialog">
+            <h2>热力学松弛</h2>
+            <p><span class="module-select" data-content="选择模块：Modules--->Forcite--->Task--->Dynamic--->More"></span></p>
+            <p><span class="param-setting" data-content="参数设置：ensemble：NVT，Temperature：2000 K，time step：0.5 fs，Fix bonds：True，“Themostat：Berendsen，“Forcefield：Compass II"></span></p>
+        </div>
+	
+    </div>
+	
+	
+	
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Selection_of_force_field_files.html'">下一步</button>
+        <button type="button" onclick="window.location.href='Selection_of_reaction_system.html'">返回</button>
+    </div>
+	<div class="button">
+         <button onclick="openFile('data.CHO_PVA.txt')">PVA_data.CHO</button>
+    </div>
+	<script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+	</script>
+</body>
+</html>

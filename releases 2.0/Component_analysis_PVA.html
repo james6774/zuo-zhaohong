@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚乙烯醇(PVA)成分分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚乙烯醇(PVA)成分分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成物种浓度-时间的数据图</button>
+        <button onclick="displayText()">数据分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Component_analysis_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Component_analysis.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PVA_CA.png" alt="PVA_CA.png" style="width:80%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>PVA模型中物种变化如图，从图a中的物种种类数（Species）和物种个数（Molecules）变化，以及小分子化合物C2H2、CO和H2O的生成速率可以看出，PVA裂解过程中反应初期0-10ps的裂解主要是C—C键和C—O键的断裂，两种类型键的断裂加快了聚合物分子的裂解这也是导致性对于PE、PB而言，PVA的裂解速度最快的主要原因。在10ps时间以后，C—C键和C—O键的断裂速率逐渐减弱，但随着小分子物种的数量的增加使得PVA的裂解速率仍然能够较PE和PB这这一阶段的有较高的分解速率。反应到中后期，由于C—C键中存在一个羟基，使得聚合物分子始终存在裂缝的可能，所以即使反应进入到可后期，PVA的裂解速率没有如PE、PB那样进入一个平台期，而是随着反应的进行继续发生这裂解反应。</p>';
+        }
+    </script>
+</body>
+</html>

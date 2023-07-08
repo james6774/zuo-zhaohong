@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>实验选项</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .btn-container {
+            position: fixed;
+            left: 0;
+            width: 10%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 1em;
+        }
+        .option-btn {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: grey;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: left;
+            width: 100%;
+        }
+        .option-btn:hover {
+            background-color: #4CAF50;
+        }
+        .experiment-title {
+            margin-bottom: 20px;
+        }
+        .center-text {
+            font-size: 2em;
+            color: #4CAF50;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <h1 class="experiment-title">实验</h1>
+        <button class="option-btn" onclick="window.location.href='Selection_of_reaction_system.html'" >反应体系选择</button>
+        <button class="option-btn" onclick="window.location.href='Molecular_structure_optimization.html'" >分子结构优化</button>
+        <button class="option-btn" onclick="window.location.href='Selection_of_force_field_files.html'" >力场文件选择</button>
+        <button class="option-btn" onclick="window.location.href='Simulation_settings.html'" >模拟计算设置</button>
+        <button class="option-btn" onclick="window.location.href='ReaxFF_simulation.html'" >ReaxFF模拟计算</button>
+        <button class="option-btn" onclick="window.location.href='Cracking_trajectory_demonstration.html'" >裂解轨迹演示</button>
+        <button class="option-btn" onclick="window.location.href='Component_analysis.html'" >成分分析</button>
+        <button class="option-btn" onclick="window.location.href='Analysis_of_complex_reaction_networks.html'" >复杂反应网络分析</button>
+        <button class="option-btn" onclick="window.location.href='Kinetic_analysis_1.html'" >动力学分析</button>
+        <button type="button" onclick="window.location.href='2.html'">返回</button>
+    </div>
+   
+	
+	<span class="center-text">准备好了吗？开始我们的探索旅程吧。<br>我们将进入一个神奇的分子世界。</span>
+</body>
+</html>

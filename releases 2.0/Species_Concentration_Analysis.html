@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>物种浓度变化</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>物种浓度变化</h1>
+        <div class="button">
+            <button onclick="window.location.href='1.html'">PE</button>
+            <button onclick="window.location.href='2.html'">PB</button>
+            <button onclick="window.location.href='3.html'">PVA</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+            <p>
+			物种浓度(Species Concentration Analysis)在反应动力学分析的作用包括：
+			</p>
+			<h2>研究裂解反应动力学</h2>
+			<p>
+             高聚物裂解是一种化学反应过程，其进行过程中会产生不同种类和数量的裂解产物。
+			 通过对物种浓度的变化进行研究，可以帮助了解这种裂解反应的动力学性质，如反
+			 应速率、反应机理等。
+			</p>
+			<h2>评估裂解效果</h2>
+			<p>
+             物种浓度的变化可以反映出裂解过程的效果。例如，如果某种裂解产物的浓度随时间
+			 持续增加，那么可能说明这种产物是裂解的主要产物，而裂解过程可能主要通过生成
+			 这种产物的途径进行。
+			</p>
+			<h2>预测裂解产物的性质</h2>
+			<p>
+             裂解产物的物种浓度可能会影响到裂解后系统的性质。例如，某些裂解产物的浓度很高，
+			 可能会导致系统的黏度增加、稳定性降低等。通过对物种浓度的变化进行研究，可以帮
+			 助预测这些裂解产物的性质。
+			</p>
+			<h2>设计优化裂解工艺</h2>
+			<p>
+             通过对物种浓度的变化进行研究，可以帮助设计和优化裂解工艺。例如，如果研究发现
+			 在一定条件下，可以得到期望的裂解产物的高浓度，那么可以根据这个发现来调整裂解
+			 条件，以提高裂解效果。
+			</p>
+			  
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+        <button type="button" onclick="window.location.href='Simulation_settings.html'">下一步</button>
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

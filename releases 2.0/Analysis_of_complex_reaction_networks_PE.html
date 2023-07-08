@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚乙烯(PE)复杂反应网络分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚乙烯(PE)复杂反应网络分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成裂解路径网络图</button>
+        <button onclick="displayText()">路径分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Analysis_of_complex_reaction_networks.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PE_ACRN.png" alt="PVA_CA.png" style="width:70%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>从反应路线图中可以看出，随着PE裂解反应的进行，高分子链逐渐开始出现C—C键的断裂反应，从反应物种的分析可以得到四种反应类型。其中·H自由基伴随着整个裂解过程，说明它在裂解过程中起到了重要作用。黑色框：均裂，单键裂解，裂解的分子量没有一个固定的比例，这说明高聚物裂解过程中键的断裂是一个统计的结果。蓝色框：均裂，单键裂解，裂解为小分子，都是伴随着H的脱出，生成H自由基。紫色框：单键的裂解，生成亚甲基。红色框：在裂解的同时伴随着链的从新聚合。最终主要生成稳定的乙烯分子。</p>';
+
+
+
+        }
+    </script>
+</body>
+</html>

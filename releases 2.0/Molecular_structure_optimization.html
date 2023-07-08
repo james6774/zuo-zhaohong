@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>选择优化的体系</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>选择优化体系</h1>
+        <button onclick="window.location.href='Molecular_structure_optimization_PE.html'">聚乙烯(PE)</button>
+        <button onclick="window.location.href='Molecular_structure_optimization_PB.html'">聚丁二烯(PB)</button>
+        <button onclick="window.location.href='Molecular_structure_optimization_PVA.html'">聚乙烯醇(PVA)</button>
+        
+    </div>
+	<div class="img-container">
+            <img src="PE.png" alt="PE">
+            <img src="PB.png" alt="PB">
+            <img src="PVA.png" alt="PVC">
+    </div>
+	<div class="nav-btns">
+       
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

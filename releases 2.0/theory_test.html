@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>反应立场理论选择题</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnTest">ReaxFF基础知识测试</button>
+    <div id="result">测试结果：</div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>1. Reactive Force Field (ReaxFF)模型基于哪两种理论？</p>
+            <input type="radio" name="question1" value="0"> A. 经典力场模型和量子力学<br>
+            <input type="radio" name="question1" value="1"> B. 牛顿力学和分子动力学<br>
+            <input type="radio" name="question1" value="0"> C. 薛定谔方程和泡利不相容原理<br>
+            <input type="radio" name="question1" value="0"> D. 热力学和统计力学<br>
+            <!-- 添加其他三个问题 -->
+
+			
+            <p>2. ReaxFF模型与传统力场模型的主要区别在于：</p>
+            <input type="radio" name="question2" value="0"> A. 更高的计算速度<br>
+            <input type="radio" name="question2" value="1"> B. 能够描述化学反应中化学键的形成和断裂<br>
+            <input type="radio" name="question2" value="0"> C. 需要更多的输入参数<br>
+            <input type="radio" name="question2" value="0"> D. 仅能处理有机化合物<br>
+		
+             <p>3. 在ReaxFF模型中，分子的动力学行为是通过什么来描述的？</p>
+             <input type="radio" name="question3" value="1"> A. 分子中原子之间的相互作用势能函数<br>
+             <input type="radio" name="question3" value="0"> B. 分子的能级结构<br>
+             <input type="radio" name="question3" value="0"> C. 原子核的质量和电荷<br>
+             <input type="radio" name="question3" value="0"> D. 能量守恒定律<br>
+      
+             <p>4. 在ReaxFF模型中，原子的电荷分成了哪些部分？</p>
+             <input type="radio" name="question4" value="0"> A. 质子电荷和中子电荷<br>
+             <input type="radio" name="question4" value="1"> B. 价电子电荷和非价电子电荷<br>
+             <input type="radio" name="question4" value="0"> C. 核电荷、价电子电荷和非价电子电荷<br>
+             <input type="radio" name="question4" value="0"> D. 正电荷和负电荷<br>
+          
+             <p>5. ReaxFF力场的总能量可以分解为哪两部分？</p>
+             <input type="radio" name="question5" value="0"> A. 动能和势能<br>
+             <input type="radio" name="question5" value="0"> B. 内能和熵<br>
+             <input type="radio" name="question5" value="1"> C. 键能和非键能<br>
+             <input type="radio" name="question5" value="0"> D. 热能和光能<br>
+          
+             <p>6. 在ReaxFF模型中，哪种相互作用贡献了范德华力？</p>
+             <input type="radio" name="question6" value="0"> A. 非键相互作用项<br>
+             <input type="radio" name="question6" value="0"> B. 库仑相互作用项<br>
+             <input type="radio" name="question6" value="1"> C. 范德华相互作用项<br>
+             <input type="radio" name="question6" value="0"> D. 电子转移项<br>
+         
+             <p>7. ReaxFF模型的优点是什么？</p>
+             <input type="radio" name="question7" value="0"> A. 可以描述具体的量子力学过程<br>
+             <input type="radio" name="question7" value="0"> B. 无需考虑具体的量子力学过程<br>
+             <input type="radio" name="question7" value="1"> C. 参数少，计算速度快<br>
+             <input type="radio" name="question7" value="0"> D. 只需要实验数据，不需要量子化学计算结果<br>  
+            
+             <p>8. 对于化学反应过程，ReaxFF采用了什么概念？</p>
+             <input type="radio" name="question8" value="1"> A. 反应势能面<br>
+             <input type="radio" name="question8" value="0"> B. 活化能<br>
+             <input type="radio" name="question8" value="0"> C. 反应熵<br>
+             <input type="radio" name="question8" value="0"> D. 分子轨道理论<br>     
+       
+             <p>9. ReaxFF模型可以用于模拟哪些情况？</p>
+             <input type="radio" name="question9" value="0"> A. 仅有机化合物的反应<br>
+             <input type="radio" name="question9" value="1"> B. 化学反应和分子变形<br>
+             <input type="radio" name="question9" value="0"> C. 只能模拟化学键的形成，不能模拟化学键的断裂<br>
+             <input type="radio" name="question9" value="0"> D. 仅金属和金属氧化物的反应<br>
+      
+             <p>10. ReaxFF模型在哪些领域具有广泛的应用前景？</p>
+             <input type="radio" name="question10" value="1"> A. 材料科学、生物科学、化学工程<br>
+             <input type="radio" name="question10" value="0"> B. 宇宙物理、气候学、地质学<br>
+             <input type="radio" name="question10" value="0"> C. 计算机科学、机械工程、土木工程<br>
+             <input type="radio" name="question10" value="0"> D. 艺术学、历史学、社会学<br>
+      
+			
+            <button id="btnSubmit">结束答题</button>
+        </div>
+		
+    </div>
+<script>
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementById("btnTest");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var btnSubmit = document.getElementById('btnSubmit');
+    var result = document.getElementById('result');
+    btnSubmit.onclick = function() {
+       var score = 0;
+       for (var i = 1; i <= 10; i++) {
+           var answers = document.getElementsByName('question' + i);
+           var isAnswered = false;
+           for (var j = 0; j < answers.length; j++) {
+               if (answers[j].checked) {
+                   score += parseInt(answers[j].value);
+                   isAnswered = true;
+               }
+           }
+           if (!isAnswered) {
+               alert('Please answer question ' + i);
+               return;
+           }
+       }
+       result.textContent = 'Your score: ' + score;
+	   modal.style.display = "none";
+    }
+</script>
+</body>
+</

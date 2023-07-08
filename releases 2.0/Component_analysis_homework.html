@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>课后作业</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>课后作业</h1>
+    <div class="container">
+        <div class="content">
+            <h2>数据说明及文件下载</h2>
+            <p>数据通过对species.out文件分析，利用origin作图得到。</p>
+			<p>下载species.out文件后，由于格式问题无法对该文件进行分析，因此需要对species.out进行处理，作者提供了一个python代码来处理该文件，就可以得到一个species.csv文件，利用species.csv就可以进行分析。</p>
+            <p><a href="PE_species.out" download>下载PE_species.out文件。</a></p>
+            <p><a href="PB_species.out" download>下载PB_species.out文件。</a> </p>
+            <p><a href="PVA_species.out" download>下载PVA_species.out文件。</a> </p>	
+            <p><a href="species_analysis.py" download>下载python代码。</a> </p>	
+            <p>下载的python代码中这一行：</p>
+			<p><h2>f = open(path + 'species.out','r')</h2></p>
+			<p>中的'species.out'要根据下载的species.out文件名更改。</p>			
+        </div>
+        <div class="content">
+            <h2>课后作业</h2>
+            <p>1. 通过species.csv文件，分析PE，PB，PVA中其他重要物种浓度随时间的变化，并利用origin绘制浓度-时间图。</p>
+			<p>2. 通过species.csv文件，比较PE，PB，PVA物种种类浓度、物种数总浓度的差异，绘制origin绘制浓度-时间图，并分析相同性和不同性。</p>
+			<p>将绘制得到的数据图粘贴在实验报告分析栏中，并说明。</p>
+        </div>
+    </div>
+    <div class="nav-btns">
+		<button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

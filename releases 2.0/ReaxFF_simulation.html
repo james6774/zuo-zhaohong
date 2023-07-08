@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>选择优化的体系</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .img-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .img-container img {
+            width: 800px;
+            height: 400px;
+            margin: auto; 
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <h1>模拟计算过程</h1>
+		<p>data、ffield_CHO及input文件放置在同一文件目录下</p>
+        <button id="start">开始计算</button>
+        <div id="progressBar" style="width: 100%; background: #eee; margin-top: 20px;">
+            <div id="progress" style="width: 0; height: 20px; background: #4CAF50;"></div>
+        </div>
+        <p id="status"></p>
+    </div>
+    
+	<div class="img-container">
+	<p> 计算结束后，才能进行下一步操作</p>
+        <img src="ReaxFF_simulation.gif" alt="Description of the image" style="width:1000px; height:800px">
+    </div>
+	
+    <div class="nav-btns">
+        <button id="back" disabled>返回</button>
+        <button id="next" disabled>下一步</button>
+    </div>
+
+    <script>
+        var progress = 0;
+        var progressInterval;
+
+        function startProgress() {
+            $("#status").text("输入执行命令：lmp in input.file");
+            progressInterval = setInterval(function() {
+                progress += 3.33;
+                $("#progress").css("width", progress + "%");
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    $("#status").text("计算结束，请查看计算结果");
+                    $("#back").prop("disabled", false);
+                    $("#next").prop("disabled", false);
+                }
+            }, 1000);
+        }
+
+        $("#start").click(function() {
+            $(this).prop("disabled", true);
+            startProgress();
+        });
+		$("#back").click(function() {
+              if(!$(this).prop('disabled')) {
+                 window.location.href = 'experiment.html';
+              }
+        });
+
+        $("#next").click(function() {
+             if(!$(this).prop('disabled')) {
+                window.location.href = 'experiment.html';
+             }
+        });
+    </script>
+</body>
+</html>

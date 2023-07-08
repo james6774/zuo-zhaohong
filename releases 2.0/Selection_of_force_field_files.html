@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>选择优化的体系</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>选择力场文件</h1>
+        <div class="button">
+            <button onclick="openFile('ffield.reax.txt')">ffield.reax.CHO</button>
+            <button onclick="openFile('ffield.reax2016.txt')">ffield.reax_2016.CHO</button>
+            <button onclick="openFile('ffield.reax_CHON.txt')">ffield.reax.CHON</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+	        <p>
+                本实验涉及到C/H两个元素，相关的势能函数文件主要是包含H/C/O的势能函数文件。目前，常用的H/C/O ReaxFF势能函数文件有：
+            </p>
+            <h2>ffield.reax.CHO</h2>
+			<p>
+                这是最初的ReaxFF势能函数，它可以描述C/H/O/N等多种元素之间的相互作用。ReaxFFC包含超过30个参数，用于描述键能、角势能、电子转移、三体相互作用等多种相互作用。该文件已经被广泛应用于热化学反应和界面反应等领域。
+            </p>
+			  <h2>ffield.reax_2016</h2>
+            <p>
+                这是对ReaxFFC的一个更新版本，它添加了对Cl、Br等元素的描述，并且优化了参数，提高了模拟的精度和可靠性。
+            </p>
+			  <h2>ffield.reax.CHON</h2>
+            <p>
+                这是对ReaxFFC-2015的又一次更新版本，它优化了对氧化物和金属氧化物等复杂化合物的描述，增加了元素N以及对单体和聚合物的描述，使得ffield.reax.CHON更加适用于化学反应和材料科学等领域。
+            </p>
+            <p>
+                除了上述三种ReaxFF势能函数外，还有其他基于ReaxFF模型的H/C/O势能函数文件，如ReaxFFCHO和ReaxFFOX等，它们的参数和适用范围不尽相同，用户可以根据自己的需求选择合适的文件进行模拟计算。
+                对于化学反应过程，ReaxFF采用了反应势能面的概念，即将反应过程看作是从反应物到产物的一个能量面。在反应过程中，ReaxFF模型能够自动调整化学键的长度、角度和扭曲角度等参数，以适应反应势能面的变化。同时，ReaxFF还能够描述反应中的自由基和离子等中间体的生成和反应。ReaxFF模型通过引入化学键的形成和断裂等过程，提高了分子动力学模拟的准确性和适用性，使其能够更好地模拟化学反应和分子变形等复杂情况。
+            </p>
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+        <button type="button" onclick="window.location.href='Simulation_settings.html'">下一步</button>
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

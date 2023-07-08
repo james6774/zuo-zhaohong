@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>复杂反应网络分析</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>复杂反应网络分析</h1>
+        <div class="button">
+            <button onclick="window.location.href='Analysis_of_complex_reaction_networks_PE.html'">聚乙烯(PE)</button>
+            <button onclick="window.location.href='Analysis_of_complex_reaction_networks_PB.html'">聚丁二烯(PB)</button>
+            <button onclick="window.location.href='Analysis_of_complex_reaction_networks_PVA.html'">聚乙烯醇(PVA)</button>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            var filePath = './' + filename; // 文件路径，相对于当前HTML文件的同一文件夹
+            window.open(filePath);
+        }
+    </script>
+	   <div class="container2">
+            <p>
+			高聚物裂解反应通常涉及大量的反应物种和复杂的反应途径。要了解整个反应过程必须进行复杂反应网络分析。
+			</p>
+			<h2>1.揭示反应机理</h2>
+			<p>
+             复杂的反应网络可以帮助我们理解反应的详细过程，包括反应的起始、进行和结束阶段，从而揭示反应机理。
+			 这对于改进反应条件，优化产物，减少副产物等方面具有重要指导意义。
+			</p>
+			<h2>2.预测和控制反应结果</h2>
+			<p>
+             通过分析反应网络，我们可以预测各种可能的反应路径和产物，从而对反应结果有更准确的预期。同时，
+			 我们可以通过调整反应条件来控制反应的进行，使反应朝着我们期望的方向进行。
+			</p>
+			<h2>3.提供模型和数据</h2>
+			<p>
+             复杂反应网络分析可以为模型建立提供基础数据和理论依据。这些模型可以被用来在没有实验的情况下预测
+			 反应结果，或者在设计新的反应过程时提供参考。
+			</p>
+			
+		</div>
+    </div>
+	</div>
+	<div class="nav-btns">
+        <button type="button" onclick="window.location.href='theory_test2.html'">裂解机理基础知识测试</button>
+        <button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

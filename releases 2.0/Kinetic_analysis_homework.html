@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>课后作业</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>课后作业</h1>
+    <div class="container">
+        <div class="content">
+            <h2>数据说明及文件下载</h2>
+            <p>通过对聚合度150，分子链为9条的PE裂解体系的物种浓度随时间的变化进行了动力学分析。</p>
+	        <p>由于数据量很大，所以建议同学们在以下网址下载建模数据以及该实验的下载安装运行版本：</p>
+            <a href="https://github.com/james6774/zuo-zhaohong/" target="_blank">https://github.com/james6774/zuo-zhaohong</a></p>	
+        </div>
+        <div class="content">
+            <h2>课后作业</h2>
+            <p>下载建模数据，进行真实的运算。</p>
+        </div>
+    </div>
+    <div class="nav-btns">
+		<button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

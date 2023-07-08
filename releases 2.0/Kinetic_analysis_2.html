@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>动力学分析</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>动力学分析</h1>
+    <div class="container">
+        <button onclick="displayImage()">生成数据图</button>
+        <button onclick="displayText()">动力学分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Kinetic_analysis_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Kinetic_analysis_1.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="Kinetic_analysis_2.png" alt="Kinetic_analysis_2.png" style="width:90%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>通过对PE和PB体系中物种浓度的变化和主要产物C2H4的分析中，我们得出该类裂解体系存在两个阶段，为验证该想法，采用阿伦尼乌斯公式的原理，对PE_150体系中的总物种浓度和C2H4的浓度随反应时间的变化进行了数值拟合。从拟合结果可以看到：尤其在总物质浓度随时间的变化明显是两个阶段，其中反应时间0-40ps的范围其拟合系数分别到达了0.94，在反应时间为15ps-75ps的范围拟合系数为0.97，而在主要产物的生成浓度随时间的变化中反应时间0-40ps的范围其拟合系数分别到达了0.95，在反应时间为40ps-75ps的范围拟合系数为0.91。这说明裂解反应的前期和裂解反应的中后期的主要途径存在区别，反应的前期主要以长链分子的裂解为主，反应的中后期主要是小分子链及小分子化合物的裂解为主，这也与实验观察到的现象一致。</p>'
+
+
+        }
+    </script>
+</body>
+</html>

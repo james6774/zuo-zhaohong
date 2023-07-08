@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>反应立场理论选择题</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnTest">聚合物裂解基础知识测试</button>
+    <div id="result">测试结果：</div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>1. 聚乙烯的热裂解反应机理通常不包括下列哪个过程？</p>
+            <input type="radio" name="question1" value="0"> A. 初步的热解<br>
+            <input type="radio" name="question1" value="0"> B. β-消除反应<br>
+            <input type="radio" name="question1" value="0"> C. α-消除反应<br>
+            <input type="radio" name="question1" value="1"> D. 氧化反应<br>
+            <p>2. 在聚丁二烯的裂解过程中，哪个反应不是放热反应？</p>
+            <input type="radio" name="question2" value="1"> A. 热解<br>
+            <input type="radio" name="question2" value="0"> B. 键反应<br>
+            <input type="radio" name="question2" value="0"> C. 质子转移<br>
+            <input type="radio" name="question2" value="0"> D. 长链碳骨架的断裂<br>
+            <p>3. 在高温条件下，聚乙烯醇分子中的C-O键断裂，产生的是什么？</p>
+            <input type="radio" name="question3" value="1"> A. 乙烯和水<br>
+            <input type="radio" name="question3" value="0"> B. 丙烯和水<br>
+            <input type="radio" name="question3" value="0"> C. 乙烯和氧气<br>
+            <input type="radio" name="question3" value="0"> D. 丙烯和氧气<br>
+            <p>4. 聚乙烯分子中，相邻两个碳原子之间的共价键断裂形成的是什么？</p>
+            <input type="radio" name="question4" value="0"> A. 乙烯和一个自由基<br>
+            <input type="radio" name="question4" value="1"> B. 丙烯和一个自由基<br>
+            <input type="radio" name="question4" value="0"> C. 乙烯和两个自由基<br>
+            <input type="radio" name="question4" value="0"> D. 丙烯和两个自由基<br>
+            <p>5. 以下哪种反应是聚丁二烯裂解过程中可能发生的反应？</p>
+            <input type="radio" name="question5" value="0"> A. 键反应<br>
+            <input type="radio" name="question5" value="0"> B. 氧化反应<br>
+            <input type="radio" name="question5" value="0"> C. 热解反应<br>
+            <input type="radio" name="question5" value="1"> D. 所有以上的反应<br>
+            <p>6. 聚乙烯醇的氧化反应的速率取决于什么因素？</p>
+            <input type="radio" name="question6" value="0"> A. 氧气的浓度<br>
+            <input type="radio" name="question6" value="0"> B. 反应温度<br>
+            <input type="radio" name="question6" value="0"> C. 聚乙烯醇的分子量<br>
+            <input type="radio" name="question6" value="1"> D. 所有以上的因素<br>
+            <p>7. 聚丁二烯裂解的过程中，分子被分解成两个自由基的反应是？</p>
+            <input type="radio" name="question7" value="1"> A. 热解<br>
+            <input type="radio" name="question7" value="0"> B. 键反应<br>
+            <input type="radio" name="question7" value="0"> C. 质子转移<br>
+            <input type="radio" name="question7" value="0"> D. 长链碳骨架的断裂<br>
+            <p>8. 聚乙烯醇可以与什么化合物发生烷基化反应，形成乙基化或丙基化产物？</p>
+            <input type="radio" name="question8" value="0"> A. 含有活泼氧原子的化合物<br>
+            <input type="radio" name="question8" value="1"> B. 含有活泼氢原子的化合物<br>
+            <input type="radio" name="question8" value="0"> C. 含有活泼氮原子的化合物<br>
+            <input type="radio" name="question8" value="0"> D. 含有活泼硫原子的化合物<br>
+            <p>9. 聚乙烯热裂解过程中，形成的自由基主要来源于什么反应？</p>
+            <input type="radio" name="question9" value="1"> A. 初步的热解<br>
+            <input type="radio" name="question9" value="0"> B. β-消除反应<br>
+            <input type="radio" name="question9" value="0"> C. α-消除反应<br>
+            <input type="radio" name="question9" value="0"> D. 质子转移反应<br>
+            <p>10. 在高温和高压下，聚乙烯醇分子之间会发生什么反应，形成较长的高聚物？</p>
+            <input type="radio" name="question10" value="0"> A. 热解反应<br>
+            <input type="radio" name="question10" value="1"> B. 缩合反应<br>
+            <input type="radio" name="question10" value="0"> C. 氧化反应<br>
+            <input type="radio" name="question10" value="0"> D. 烷基化反应<br>
+			
+            <button id="btnSubmit">结束答题</button>
+        </div>
+		
+    </div>
+<script>
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementById("btnTest");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var btnSubmit = document.getElementById('btnSubmit');
+    var result = document.getElementById('result');
+    btnSubmit.onclick = function() {
+       var score = 0;
+       for (var i = 1; i <= 10; i++) {
+           var answers = document.getElementsByName('question' + i);
+           var isAnswered = false;
+           for (var j = 0; j < answers.length; j++) {
+               if (answers[j].checked) {
+                   score += parseInt(answers[j].value);
+                   isAnswered = true;
+               }
+           }
+           if (!isAnswered) {
+               alert('Please answer question ' + i);
+               return;
+           }
+       }
+       result.textContent = 'Your score: ' + score;
+	   modal.style.display = "none";
+    }
+</script>
+</body>
+</

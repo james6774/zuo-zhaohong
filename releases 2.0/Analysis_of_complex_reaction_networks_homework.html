@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>课后作业</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>课后作业</h1>
+    <div class="container">
+        <div class="content">
+            <h2>数据说明及相关软件链接</h2>
+            <p>数据通过对species.out文件中的主要成分析分析，利用origin作图得到反应路径图。</p>
+			<p>下载species.out文件及处理参考“成分分析”的作业。</p>
+			<p>但该路径并不完成，如果要得到完成全面的路径可以借助“Chemkin”或者“Cantera”软件进行分析。</p>
+			<p>软件的官网链接：</p>
+			<a href="https://www.ansys.com" target="_blank">https://www.ansys.com</a></p>
+			<a href="https://cantera.org" target="_blank">https://cantera.org</a></p>
+			
+    		
+        </div>
+        <div class="content">
+            <h2>课后作业</h2>
+            <p>1. 分析PE，PB，PVA中亚甲基自由基的生成和消耗路径图。</p>
+			<p>2. 比较PE，PB，PVA最终生成的主要产物有什么相同和不同？</p>
+			<p>3. PB链中的双键和PE中不含有双键在裂解路径上有什么不同？</p>
+			<p>4. PVA含有的羟基基团对反应路径有什么影响？</p>
+			<p>将以上答案填写在结果讨论中。</p>
+        </div>
+    </div>
+    <div class="nav-btns">
+		<button type="button" onclick="window.location.href='experiment.html'">返回</button>
+    </div>
+</body>
+</html>

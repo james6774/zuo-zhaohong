@@ -1,0 +1,83 @@
+# LAMMPS input script for methane oxidation using ReaxFF
+
+# 初始化
+units           real                     # 使用实际单位
+atom_style      charge                   # 使用带电荷的原子风格
+boundary        p p p                     # 设定周期性边界条件
+newton          on                       # 启用牛顿运动方程求解
+
+# 创建原子类型
+atom_modify     sort 0 0.0               # 排序和修改原子类型
+
+# 设定计算框架
+read_data       <data-file>              # 读取原子坐标和拓扑信息
+
+# 设定力场
+pair_style      reax/c                   # 使用ReaxFF力场
+pair_coeff      * * <force-field-file>   <element-parameters-file> <reax-bond-order-file>   # 设定力场参数
+
+# 设定计算设置
+neighbor        2.0 bin                  # 构建邻居列表
+neigh_modify    every 1 delay 0 check yes
+
+# 键的计算
+compute         reax all pair reax/c      # 计算键信息
+compute_modify  reax dynamic yes          # 开启动态计算
+thermo          1                        # 热力学输出频率
+
+# 输出轨迹
+dump            1 all dcd <dump-frequency> <trajectory-file>  # 输出轨迹信息
+dump_modify     1 element <element-list>                        # 选择输出的元素类型
+
+# 计算径向分布函数（RDF）
+compute         rdf all rdf <compute-frequency> <number-of-bins> <rdf-file>          # 计算RDF
+fix             2 all ave/time <compute-frequency> <compute-ave-time> <compute-frequency> c_rdf[*] file <rdf-ave-file> mode vector   # 计算RDF的时间平均值
+
+# 计算势能的时间平均值和涨落
+compute         pe all pe/atom           # 计算每个原子的势能
+fix             3 all ave/time <compute-frequency> <compute-ave-time> <compute-frequency> c_pe file <pe-ave-file> mode vector  # 计算势能的时间平均值
+fix             4 all ave/time <compute-frequency> <compute-ave-time> <compute-frequency> c_pe file <pe-fluct-file> ave running mode vector  # 计算势能的涨落
+
+# 计算自由能
+fix             5 all temp/berendsen <temperature> <temperature> <damping-time>    # Berendsen恒温
+fix             6 all qeq/reax <qeq-tolerance> <qeq-max-iter> <qeq-relax-freq>  # QEQ（电荷均衡）
+fix             7 all reax/c/bonds <compute-frequency> <bond-energy-file> <reax-bond-energy-file>    # 计算键能量
+fix             8 all ave/time <compute-frequency> <compute-ave-time> <compute-frequency> f_7[3] file <free-energy-file> mode vector   # 计算自由能
+
+# 扇形采样方法
+fix             9 all ave/histo <compute-frequency> <histogram-size> <histogram-file> mode vector     # 采集数据并生成直方图
+
+# 运行模拟
+timestep        1.0                      # 时间步长
+run             <number-of-steps>        # 运行模拟步数
+
+# 结果输出
+thermo_style    custom step temp press vol pe ke etotal     # 自定义热力学输出格式
+thermo_modify   lost ignore             # 忽略丢失原子的能量
+
+
+<data-file>：包含原子坐标和拓扑信息的数据文件。
+<force-field-file>：ReaxFF力场的文件。
+<element-parameters-file>：元素参数文件。
+<reax-bond-order-file>：ReaxFF键序文件。
+<dump-frequency>：轨迹输出频率。
+<trajectory-file>：轨迹输出文件名。
+<element-list>：要选择输出的元素类型列表。
+<compute-frequency>：计算频率。
+<number-of-bins>：径向分布函数（RDF）的直方图数量。
+<rdf-file>：RDF输出文件名。
+<compute-ave-time>：计算时间平均值的时间范围。
+<rdf-ave-file>：RDF时间平均值输出文件名。
+<pe-ave-file>：势能的时间平均值输出文件名。
+<pe-fluct-file>：势能的涨落输出文件名。
+<temperature>：所需的温度。
+<damping-time>：Berendsen恒温的阻尼时间。
+<qeq-tolerance>：QEQ（电荷均衡）的容差。
+<qeq-max-iter>：QEQ的最大迭代次数。
+<qeq-relax-freq>：QEQ松弛的频率。
+<bond-energy-file>：键能量输出文件名。
+<reax-bond-energy-file>：ReaxFF键能量输出文件名。
+<free-energy-file>：自由能输出文件名。
+<histogram-size>：直方图的大小。
+<histogram-file>：直方图输出文件名。
+<number-of-steps>：模拟的步数。

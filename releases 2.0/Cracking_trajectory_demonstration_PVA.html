@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>聚乙烯醇(PVA)裂解轨迹演示</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #F0F8FF;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85%;
+                    margin: 50px auto; /* Center the container */
+        }
+        .content {
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 40%;
+            padding: 15px;
+            margin: 50px auto;
+            color: white;
+            background-color: #6495ED;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #4169E1;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #778899;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #708090;
+        }
+    </style>
+</head>
+<body>
+    <h1>聚乙烯醇(PVA)裂解轨迹演示</h1>
+    <div class="container">
+        <button onclick="displayImage()">轨迹可视化</button>
+        <button onclick="displayText()">轨迹分析</button>
+    </div>
+    <div class="container">
+        <div id="imageContent" class="content">
+            <!-- Image will be inserted here -->
+        </div>
+        <div id="textContent" class="content">
+            <!-- Text will be inserted here -->
+        </div>
+    </div>
+    <div class="nav-btns">
+        <button type="button" onclick="window.location.href='Cracking_trajectory_demonstration_homework.html'">作业</button>
+		<button type="button" onclick="window.location.href='Cracking_trajectory_demonstration.html'">返回</button>
+    </div>
+    <script>
+        function displayImage() {
+            document.getElementById('imageContent').innerHTML = '<img src="PVA_CRD.gif" alt="PVA_ACRN.gif" style="width:90%; height:auto;">';
+        }
+        function displayText() {
+            document.getElementById('textContent').innerHTML = '<p>图中红色圆球是H，蓝色为C，黄色为氧。可以看出，PVA的主链结构中不仅有C—C单键，同时还有羟基OH取代了C—C上的，这使得体系内的原子种类增加到了三种，这也导致裂解过程变得复杂。PVA裂解初期仍然是大分子链的断裂，同时也伴随着小分子中间体和化合物生成，这在后面三种体系的物种分析比较中得到了验证，如图16。随着裂解程度的深度，伴随着中间高活性的自由基的生成·H、·CH3和·OH以及较稳定的小分子化合物的产生，·OH自由基是一类活性高且存在时间更长的的自由基，这导致裂解反应速率大大加快，这也是PVA的裂解速度在三类体系中最快的一类链。可以看到PVA裂解过程中主要生成的稳定小分子化合物为乙烯、二氧化碳和水，没有大分子链的存在。</p>';
+
+
+
+        }
+    </script>
+</body>
+</html>

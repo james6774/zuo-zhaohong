@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>实验报告</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container1 {
+            max-width: 600px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+		h2 {
+            text-align: center;
+            color: #333;
+        }
+        .container2 {
+            max-width: 100px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .img-container img {
+            width: 400px;
+            height: 400px;
+        }
+		.nav-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .nav-btns button {
+            background-color: #777;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .nav-btns button:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+	
+	 <div class="container1">
+        <h1>基于ReaxFF模拟计算高聚物降解反应动力学实验</h1>
+        <div class="button">
+            <h1>实验报告</h1>
+	         <p> 将生成的报告复制并打印</p>
+			 <button onclick="promptInput('实验者姓名')">实验者姓名</button>
+			 <button onclick="promptInput('实验时间')">实验时间</button>
+             <button onclick="promptInput('实验目的')">实验目的</button>
+             <button onclick="promptInput('实验原理')">实验原理</button>
+             <button onclick="promptInput('实验过程')">实验过程</button>
+	         <button onclick="promptInput('实验方法')">实验方法</button>
+	         <button onclick="promptInput('实验数据')">实验数据</button>
+	         <button onclick="promptInput('结果分析')">结果分析</button>
+             <button onclick="generateReport()">生成实验报告</button>
+             <div id="report"></div>
+        </div>
+    </div>
+	
+    <script>
+        var report = {
+            '实验者姓名': '',
+			'实验时间': '',
+			'实验目的': '',
+            '实验原理': '',
+            '实验过程': '',
+			'实验方法': '',
+			'实验数据': '',
+			'结果分析': '',
+			'数据图粘贴栏': '',
+        };
+
+        function promptInput(field) {
+            var input = prompt(field);
+            report[field] = input;
+        }
+
+        function generateReport() {
+            var reportDiv = document.getElementById('report');
+            reportDiv.innerHTML = '';
+            for (var key in report) {
+                reportDiv.innerHTML += '<h2>' + key + '</h2>';
+                reportDiv.innerHTML += '<p>' + report[key] + '</p>';
+            }
+        }
+    </script>
+	<div class="nav-btns">
+       
+        <button type="button" onclick="window.location.href='final.html'">结束实验</button>
+    </div>
+</body>
+</html>
